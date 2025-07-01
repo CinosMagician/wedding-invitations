@@ -1,0 +1,24 @@
+.contact {
+    color: white;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    /* background-image: url(../assets/codioful-formerly-gradienta-bKESVqfxass-unsplash.jpg); */
+    background-size: cover; /* Adjusted size to cover the whole container */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Avoid repeating the image */
+  }
+
+  @media (max-width: 800px) {
+    .mediaP {
+        padding: 0px 10px;
+    }
+}
+
+@media (max-width: 425px) {
+    .contact {
+        width: 95%;
+    }
+    .mediaP {
+        padding: 0px 10px;
+    }
+}

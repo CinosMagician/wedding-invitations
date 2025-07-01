@@ -1,0 +1,84 @@
+.portback {
+  padding: 50px;
+  background-color: #f4f4f9;
+}
+
+.portfolioHeader {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Space between items */
+  padding: 0 40px;
+}
+
+.project-image-box {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .project-title {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+} */
+
+.project-desc-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-desc-box h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.project-desc-box p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.github-link .gitlogo {
+  width: 24px;
+  margin-right: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.github-link:hover .gitlogo {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Switch to a single column layout on small screens */
+  }
+}

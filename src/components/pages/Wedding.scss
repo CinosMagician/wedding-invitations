@@ -1,0 +1,94 @@
+.weddingImg {
+  max-width: 800px;
+  max-height: 820px;
+  width: auto;
+  height: auto;
+  margin-inline: auto;
+  padding: 20px;
+}
+.wedding {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-inline: auto;
+  width: 100vw;
+  text-align: center;
+}
+.guestNames {
+  justify-content: center;
+  text-align: center;
+}
+.couple {
+  text-align: center;
+  & > * {
+    font-size: 40px;
+    font-family: serif;
+    font-style: italic;
+  }
+}
+.dateFlex {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  justify-content: center;
+  h3 {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+}
+.dateNumber {
+  font-size: 24px;
+}
+
+.rsvp {
+  padding: 4px 12px;
+  border-radius: 4px;
+  background-color: pink;
+  transition: all ease 0.5s;
+  &:hover {
+    background-color:palevioletred;
+  }
+}
+
+.timeline-button {
+  transition: all ease 0.5s;
+  &:hover {
+    background-color: pink !important;
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  /* Start transparent */
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;  /* Fade in over 0.3 seconds */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  text-align: center;
+
+  /* Optional: also fade in popup content */
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+  animation-delay: 0.1s; /* delay slightly after overlay */
+}
