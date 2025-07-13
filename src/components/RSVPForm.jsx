@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
 import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function RSVPForm({ names }) {
   // Initialize form data: one entry per guest with attending + dietary
 const [formData, setFormData] = useState([]);
+const navigate = useNavigate();
 
   // Update formData when names change
   useEffect(() => {
@@ -58,7 +60,7 @@ const [formData, setFormData] = useState([]);
       .then(
         (response) => {
           alert("RSVP sent successfully!");
-          redirect("/thank-y ou");
+          navigate("/thank-you", { replace: true });
           // Reset form or keep as is
         },
         (error) => {
