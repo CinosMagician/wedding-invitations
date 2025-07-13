@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://cinosmagician.github.io/wedding-invitations",
   "scripts": {
     "dev": "vite",
     "start": "vite",
