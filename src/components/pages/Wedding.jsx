@@ -7,23 +7,23 @@ import grove from "../../assets/241076685_10158714095737705_3736745650087871756_
 import "./Wedding.scss";
 import RSVPForm from "../RSVPForm";
 
-const timelineData = [
-  {
-    time: "3:00 PM",
-    imageUrl: church,
-    description: "Wedding Service",
-  },
-  {
-    time: "4:00 PM",
-    imageUrl: photos,
-    description: "Photos and Intermission",
-  },
-  {
-    time: "6:00 PM",
-    imageUrl: grove,
-    description: "Wedding Reception at the Grove Tavern",
-  },
-];
+// const timelineData = [
+//   {
+//     time: "3:00 PM",
+//     imageUrl: church,
+//     description: "Wedding Service",
+//   },
+//   {
+//     time: "4:00 PM",
+//     imageUrl: photos,
+//     description: "Photos and Intermission",
+//   },
+//   {
+//     time: "6:00 PM",
+//     imageUrl: grove,
+//     description: "Wedding Reception at the Grove Tavern",
+//   },
+// ];
 
 export default function Wedding() {
   const [names, setNames] = useState([]);
@@ -62,98 +62,58 @@ export default function Wedding() {
   }
 
   return (
-    <div className="wedding">
-      {/* <img
-        className="weddingImg"
-        src={weddingInvite}
-        alt="Wedding Invitation"
-      /> */}
-      {names.length > 0 && (
-        <div className="guestNames">
-          <h1>Dear {formatNames(names)}</h1>
-          <p>You're invited the wedding of</p>
-        </div>
-      )}
-      <div className="couple">
-        <h2>Lachlan</h2>
-        <h2>&</h2>
-        <h2>Lidya</h2>
-      </div>
-      <div className="dateFlex">
-        <h3>Saturday</h3>
-        <p className="dateNumber">16</p>
-        <h3>at 3:00pm</h3>
-      </div>
-      <h3>AUGUST</h3>
-      <h3>
-        St. John's Lutheran Church, Tea Tree Gully
-      </h3>
-    <div>
-      <h2>Wedding Timeline</h2>
-      <ul
-        style={{
-          listStyle: "none",
-          padding: 0,
-          display: "flex",           // Make it flex container
-          gap: "20px",               // Spacing between items horizontally
-          overflowX: "auto",         // Optional: scroll if too wide
-          whiteSpace: "nowrap",      // Prevent wrapping to next line
-          justifyContent: "center",
-        }}
-      >
-        {timelineData.map((item, index) => (
-          <li key={index} style={{ margin: 0 }}>
-            <button
-              onClick={() => setSelected(index)}
-              className="timeline-button"
-              style={{
-                cursor: "pointer",
-                padding: "8px 16px",
-                fontSize: "16px",
-                borderRadius: "5px",
-                border: "1px solid #333",
-                backgroundColor: "#eee",
-                whiteSpace: "normal",  // Allow button text to wrap if needed
-              }}
-            >
-              {item.time}
-            </button>
-          </li>
-        ))}
-      </ul>
-      {/* Popup */}
-      {selected !== null && (
-        <div
-          onClick={() => setSelected(null)}
-          className="popup-overlay"
-        >
-          <div
-            onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside popup
-            className="popup-content"
-          >
-            <h3>{timelineData[selected].description}</h3>
-            <img
-              src={timelineData[selected].imageUrl}
-              alt={timelineData[selected].description}
-              style={{ maxWidth: "100%", borderRadius: "8px", height: "270px", width: "300px", marginInline: "auto" }}
-            />
-            <br />
-            <button
-              onClick={() => setSelected(null)}
-              style={{
-                marginTop: "10px",
-                padding: "8px 16px",
-                fontSize: "16px",
-                cursor: "pointer",
-              }}
-            >
-              Close
-            </button>
+    <div className="outer">
+      <div className="wedding">
+        {/* <img
+          className="weddingImg"
+          src={weddingInvite}
+          alt="Wedding Invitation"
+        /> */}
+        {names.length > 0 && (
+          <div className="guestNames">
+            <h1>Dear {formatNames(names)}</h1>
+            <p>You're invited the wedding of</p>
           </div>
+        )}
+        <div className="couple">
+          <h2>Lachlan</h2>
+          <h2>&</h2>
+          <h2>Lidya</h2>
         </div>
-      )}
-    </div>
-    <RSVPForm names={names} />
+        <div className="dateFlex">
+          <h3>Saturday</h3>
+          <div className="dateAb">
+            <p className="dateNumber">16</p>
+          </div>
+          <h3>at 3:00pm</h3>
+        </div>
+        <h3 style={{marginBlock: "20px"}}>AUGUST</h3>
+        <h3>
+          St. John's Lutheran Church, Tea Tree Gully
+        </h3>
+        <section 
+        style={{
+          paddingTop: '20px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '20px',
+        }}>
+        <h3>Wedding Timeline</h3>
+        <div>
+          <h4>3:00pm - Wedding Ceremony</h4>
+        </div>
+        <div>
+          <h4>4:00pm - Photography and Intermission</h4>
+        </div>
+        <div>
+          <h4>6:00pm - Wedding Reception</h4>
+          <p style={{}}>Come and join us for a celebration dinner for our newfound marriage at the Grove Tavern - Cashbar available.</p>
+        </div>
+        <div>
+        </div>
+        </section>
+      <RSVPForm names={names} />
+      </div>
     </div>
   );
 }

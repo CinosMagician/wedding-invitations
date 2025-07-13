@@ -1,0 +1,208 @@
+.textBox {
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    margin: 20px;
+    align-items: center;
+
+    /* background-color: #444; Grey background for each text box */
+
+
+}
+
+.thanks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.hello {
+    background-color: #444;
+    color: #fff; /* White text */
+    padding: 20px; /* Add padding inside the box */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    margin-bottom: 15px; /* Space between text boxes */
+}
+
+.info{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.imageBox {
+    display: flex; /* Ensure image is a flex container */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    max-width: 45%; /* Bigger image area */
+    margin-right: 20px; /* Small gap on the right */
+}
+
+.profileImage {
+    width: 100%; /* Image takes full width of parent */
+    max-width: 400px; /* Limit the max width of the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optionally round image corners */
+}
+
+.spacerBox {
+    width: 15%; /* Small gap between text and image */
+}
+
+.pageBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ensure space between text and image */
+    align-items: center; /* Vertically center */
+    width: 90%; /* Adjust width to fit the page properly */
+    /* max-width: 1200px; */
+    margin: 0 auto; /* Center horizontally */
+    padding-top: 100px; /* Adjust margin to center vertically */
+}
+
+.backgroundImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assets/astro.jpg);
+    background-size: cover;
+    background-position: center; /* Center the image */
+    background-repeat: repeat; /* Avoid repeating the image */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 840px) {
+    .pageBox {
+        flex-direction: column; /* Stack text and image vertically */
+        padding-top: 50px; /* Adjust padding for smaller screens */
+    }
+
+    .textBox, .imageBox {
+        max-width: 100%; /* Full width for both text and image */
+    }
+
+    .spacerBox {
+        display: none; /* Hide spacer on smaller screens */
+    }
+
+    .profileImage {
+        max-width: 300px; /* Smaller image on mobile */
+    }
+}
+
+@keyframes colorChange {
+    0% {
+        color: #fff; /* Start color */
+    }
+    50% {
+        color: #14dee9; /* Mid color */
+    }
+    100% {
+        color: #fff; /* End color */
+    }
+}
+
+.textColorAnimation {
+    animation: colorChange 2s infinite alternate; /* 2 seconds duration, infinite */
+}
+
+.tooling-title {
+    /* background: #12141d; */
+    border-radius: 12px;
+    padding: .8rem 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @media (min-width: 1025px) and (max-width: 1300px){
+     padding: 0.7rem 1.7rem;
+    }
+    @media (min-width: 760px) and (max-width: 1024px) {
+     padding: 0.6rem 1.5rem;
+    }
+    @media (min-width: 480px) and (max-width: 759px) {
+     padding: 0.5rem 1.3rem;
+    }
+    @media (max-width: 479px) {
+        padding: 0.4rem 1.1rem;
+    }
+}
+
+.tooling-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 255, 255, 0.303);
+    border-radius: 15px;
+    /* width: 50%; */
+    padding: .5rem;
+    .box-content {
+        flex: 0 18%;
+        height: 60px;
+        margin: 1%;
+        border-radius: 8px;
+        /* background: black; */
+        display: flex;
+        justify-content: space-evenly;
+        /* align-items: center; */
+        @media (min-width: 480px) and (max-width: 759px) {
+            flex: 0 30%;
+        }
+        @media (max-width: 479px) {
+            flex: 0 30%;
+            height: 50px;
+        }
+        .box-icon, .icon {
+                height: 30px;
+                width: 30px;
+                @media (min-width: 1025px) and (max-width: 1300px){
+                    height: 27px;
+                    width: 27px;
+                }
+                @media (min-width: 760px) and (max-width: 1024px) {
+                    width: 25px;
+                    height: 25px;
+                } 
+                @media (max-width: 479px) {
+                    width: 23px;
+                    height: 23px;
+                }
+            }
+        .box-text {
+            p {
+                font-size: 18px;
+                color: white;
+                font-weight: 700;
+                @media (min-width: 1025px) and (max-width: 1300px){
+                    font-size: 16px;
+                }
+                @media (min-width: 760px) and (max-width: 1024px) {
+                    font-size: 16px;
+                }
+                @media (max-width: 479px) {
+                    font-size: 12px;
+                } 
+            }
+        }
+    }
+}
+
+.secondHalf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 850px) {
+    .backgroundImage {
+        height: auto;
+    }
+}

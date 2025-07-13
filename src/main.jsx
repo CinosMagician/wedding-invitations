@@ -3,11 +3,7 @@ import { createBrowserRouter, RouterProvider, useLocation, Outlet } from 'react-
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import App from './App';
 import ScrollToTop from './components/tools/ScrollToTop';
-import Portfolio from './components/pages/Portfolio';
-import Contact from './components/pages/Contact';
-import About from './components/pages/About';
-import Resume from './components/pages/Resume';
-import Work from './components/pages/Work';
+import Thanks from './components/pages/Thanks';
 import './fade.css';
 import Wedding from './components/pages/Wedding';
 import Lost from './components/pages/404';
@@ -50,6 +46,10 @@ const router = createBrowserRouter([
           {
             path: '404',
             element: <Lost />
+          },
+          {
+            path: 'thank-you',
+            element: <Thanks />
           }
           // {
           //   path: 'portfolio',

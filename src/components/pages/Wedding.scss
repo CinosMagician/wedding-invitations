@@ -11,8 +11,17 @@
   flex-direction: column;
   height: 100%;
   margin-inline: auto;
-  width: 100vw;
+  width: 100%;
+  max-width: 768px;
   text-align: center;
+  padding: 40px 20px;
+  background-color: rgba(255, 229, 221, 0.7);
+}
+.outer {
+  padding: 40px 20px;
+  background-image: url("src/assets/background-card.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .guestNames {
   justify-content: center;
@@ -28,16 +37,26 @@
 }
 .dateFlex {
   display: flex;
-  gap: 24px;
+  gap: 60px;
   width: 100%;
   justify-content: center;
+  margin-left: 10px;
+  margin-top: 20px;
   h3 {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    padding-top: 5px;
   }
 }
 .dateNumber {
-  font-size: 24px;
+  font-size: 42px;
+  padding-top: 5px;
+  position: relative;
+  bottom: 16px;
+  right: 10px;
+}
+.dateAb {
+  position: absolute;
 }
 
 .rsvp {

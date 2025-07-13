@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "emailjs-com";
+import { redirect } from "react-router-dom";
 
 export default function RSVPForm({ names }) {
   // Initialize form data: one entry per guest with attending + dietary
@@ -57,10 +58,11 @@ const [formData, setFormData] = useState([]);
       .then(
         (response) => {
           alert("RSVP sent successfully!");
+          redirect("/thank-y ou");
           // Reset form or keep as is
         },
         (error) => {
-          alert("Failed to send RSVP, please try again.");
+         alert("Failed to send RSVP, please try again.");
           console.error(error);
         }
       );
@@ -74,6 +76,13 @@ const [formData, setFormData] = useState([]);
         transition={{ duration: 1, delay: 0.6 }}
       >
         Who will be attending?
+      </motion.h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.6 }}
+      >
+        Please RSVP below:
       </motion.h2>
 
       <motion.form
