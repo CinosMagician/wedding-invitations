@@ -72,7 +72,7 @@ export default function Wedding() {
         {names.length > 0 && (
           <div className="guestNames">
             <h1>Dear {formatNames(names)}</h1>
-            <p>You're invited the wedding of</p>
+            <p>You're invited to the wedding of</p>
           </div>
         )}
         <div className="couple">
