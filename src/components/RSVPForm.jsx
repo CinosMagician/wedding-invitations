@@ -119,7 +119,7 @@ const navigate = useNavigate();
         ))}
 
         <button className="rsvp btn" type="submit">
-          RSVP
+          Send RSVP
         </button>
       </motion.form>
     </div>
