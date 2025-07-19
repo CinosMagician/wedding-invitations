@@ -108,10 +108,10 @@ const navigate = useNavigate();
             {guest.attending && (
               <input
                 type="text"
-                placeholder="Any dietary requirements"
+                placeholder="Type your dietary reqs here"
                 value={guest.dietary}
                 onChange={(e) => handleDietaryChange(index, e.target.value)}
-                style={{ marginLeft: "10px" }}
+                style={{ marginLeft: "10px", width: '200px' }}
               />
             )}
           </div>

@@ -91,6 +91,7 @@ export default function Wedding() {
         <h3>
           St. John's Lutheran Church, Tea Tree Gully
         </h3>
+        <a style={{marginTop: '-10px'}} target="_blank" href="https://maps.app.goo.gl/pkvV8CF4xpMxT4Mx7">Click here for location details</a>
         <section 
         style={{
           paddingTop: '20px',
@@ -104,10 +105,11 @@ export default function Wedding() {
         </div>
         <div>
           <h4>4:00pm - Photography and Intermission</h4>
+          <p style={{maxWidth: "500px", margin: 'auto'}}>During intermission, You are all welcome to mingle and chat in the church hall before we move to the Reception </p>
         </div>
         <div>
           <h4>6:00pm - Wedding Reception</h4>
-          <p style={{}}>Come and join us for a celebration dinner for our newfound marriage at the Grove Tavern - Cashbar available.</p>
+          <p style={{maxWidth: "500px", margin: 'auto'}}>Come and join us for a celebration dinner for our newfound marriage at the <a target="_blank" href="https://maps.app.goo.gl/GvyPNpxhDRMYHLJJ8">Grove Tavern</a> - Cashbar available.</p>
         </div>
         <div>
         </div>
