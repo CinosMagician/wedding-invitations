@@ -71,7 +71,8 @@ const navigate = useNavigate();
   };
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-2">
+    <p>RSVP by 26th of July 2025</p>
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -111,7 +112,7 @@ const navigate = useNavigate();
                 placeholder="Type your dietary reqs here"
                 value={guest.dietary}
                 onChange={(e) => handleDietaryChange(index, e.target.value)}
-                style={{ marginLeft: "10px", width: '200px' }}
+                style={{ marginLeft: "10px", width: '215px' }}
               />
             )}
           </div>
